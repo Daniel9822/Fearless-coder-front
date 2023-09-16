@@ -1,0 +1,12 @@
+.swiperContainer {
+  width: 100%;
+  height: calc(100vh - 80px);
+  filter: brightness(0.5);
+}
+
+.img {
+  width: 100%;
+  height: calc(100vh - 80px);
+  object-fit: cover;
+  /* filter: blur(2px); */
+}
