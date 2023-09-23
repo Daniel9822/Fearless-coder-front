@@ -2,14 +2,9 @@ import SwiperHome from "@/components/swiper/SwiperHome"
 import style from "./page.module.css"
 import ButtonHome from "@/components/buttons/ButtonHome"
 import { BsArrowDownCircleFill } from 'react-icons/bs'
-import { Inter } from 'next/font/google'
-import Image from "next/image"
-import { moreInfo, paragraph, titleQuestion, welcomeText, welcomeTextTwo } from "@/constants/constansHome"
+import { moreInfo, paragraphOne, paragraphOneContinue, paragraphTwo, paragraphTwoContinue, titleQuestion, titleTwo, welcomeText, welcomeTextTwo } from "@/constants/constansHome"
 import Footer from "@/components/footer/Footer"
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin']
-})
+import ContentCreate from "@/components/contentCreate/ContentCreate"
 
 export default function Home() {
   return (
@@ -34,18 +29,15 @@ export default function Home() {
         </div>
 
       </main>
-      <section id="moreInfo" className={style.sectionMoreInfo}>
-        <h3 className={style.titleInfo}>{titleQuestion}</h3>
 
-        <div className={`${style.question} ${inter.variable}`}>
-          <p style={{ color: 'white' }}>{paragraph}</p>
-
-          <Image width={400} height={400} src="/interview.avif" alt="interview picture" />
-        </div>
+      <ContentCreate reverse={false} identificate={'moreInfo'} title={titleQuestion} img={'/interview.avif'} paragraph={[paragraphOne, paragraphOneContinue]}>
 
         <ButtonHome />
-      </section>
+      </ContentCreate>
 
+      <ContentCreate clipath={'polygon(0 12%, 100% 0, 100% 100%, 0% 100%)'} backgroundImg={'/background.jpg'} color={'white'} background={'white'} reverse={true} title={titleTwo} img={'/video-conference1.avif'} paragraph={[paragraphTwo, paragraphTwoContinue]} >
+
+      </ContentCreate>
       <Footer />
     </>
   )
