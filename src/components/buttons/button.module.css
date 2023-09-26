@@ -21,7 +21,12 @@
   cursor: pointer;
 }
 
+.imageContainer {
+  display: flex;
+  align-items: center;
+}
+
 .profile {
   border-radius: 50%;
-  border: 2px solid var(--highlight-color);
+  /* border: 2px solid var(--highlight-color); */
 }
