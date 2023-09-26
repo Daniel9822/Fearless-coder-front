@@ -8,12 +8,12 @@ const inter = Inter({
 
 export default function ContentCreate({ clipath, backgroundImg, color, background, reverse, identificate, title, paragraph, img, children }) {
   const sectionStyle = {
-    backgroundImage: `url(${backgroundImg})`,
+    background: `linear-gradient(to bottom, transparent, #0009), url(${backgroundImg})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    height: '100vh',
-    clipPath: `${clipath}`
+    height: '100vh'
+    // clipPath: `${clipath}`
   }
   return (
 
@@ -24,7 +24,6 @@ export default function ContentCreate({ clipath, backgroundImg, color, backgroun
         <div>
           {paragraph?.map(p => <><p style={{ color }} key={p}>{p}</p> <br /></>)}
         </div>
-        {/* <p style={{ color }}>{paragraph}</p> */}
 
         <Image width={400} height={400} src={img} alt="interview picture" />
       </div>
