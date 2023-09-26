@@ -21,6 +21,7 @@
         "space-before-function-paren":"off",
         "eol-last":"off",
         "quotes":"off",
-        "semi":"off"
+        "semi":"off",
+        "multiline-ternary":"off"
     }
 }
