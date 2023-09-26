@@ -1,10 +1,10 @@
-import SwiperHome from "@/components/swiper/SwiperHome"
+import SwiperHome from "../components/swiper/SwiperHome"
 import style from "./page.module.css"
-import ButtonHome from "@/components/buttons/ButtonHome"
+import ButtonHome from "../components/buttons/ButtonHome"
 import { BsArrowDownCircleFill } from 'react-icons/bs'
 import { moreInfo, paragraphOne, paragraphOneContinue, paragraphTwo, paragraphTwoContinue, titleQuestion, titleTwo, welcomeText, welcomeTextTwo } from "@/constants/constansHome"
-import Footer from "@/components/footer/Footer"
-import ContentCreate from "@/components/contentCreate/ContentCreate"
+import Footer from "../components/footer/Footer"
+import ContentCreate from "../components/contentCreate/ContentCreate"
 
 export default function Home() {
   return (
