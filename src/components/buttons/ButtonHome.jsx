@@ -1,5 +1,5 @@
 'use client'
-import style from './buttonHome.module.css'
+import style from './button.module.css'
 import { useRouter } from 'next/navigation'
 
 export default function ButtonHome() {
