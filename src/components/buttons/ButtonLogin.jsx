@@ -1,16 +1,28 @@
-'use client'
-import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
-import style from './button.module.css'
-import Image from 'next/image'
+"use client";
+import Link from "next/link";
+import style from "./button.module.css";
+import { useUserContext } from "@/context/userContex";
+import { IoIosArrowDown } from 'react-icons/io'
+import ImageProfile from "../imageProfile/ImageProfile";
 
 export default function ButtonLogin() {
-  const searchParams = useSearchParams()
-  const userId = searchParams.get('userId')
-  const profile = searchParams.get('profile')
-  const token = searchParams.get('token')
+  const { userActual } = useUserContext();
+  const user = JSON.parse(localStorage.getItem("user"));
 
-  return <>
-    {!userId ? <Link href={'http://localhost:3001/auth/google'}>Iniciar session</Link> : <Image src={profile} width={40} height={40} className={style.profile} />}
-  </>
+  console.log(user);
+  console.log(userActual);
+
+  return (
+    <>
+      {!user?.id && !userActual?.id ? (
+        <Link href={"http://localhost:3001/auth/google"}>Iniciar session</Link>
+      ) : (
+        <div className={style.imageContainer}>
+          <ImageProfile src={user.profile} />
+
+          <span>{<IoIosArrowDown size={20} />}</span>
+        </div>
+      )}
+    </>
+  );
 }
