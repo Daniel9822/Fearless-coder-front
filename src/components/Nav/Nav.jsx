@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Logo from '../logo/logo'
 import style from './Nav.module.css'
+import ButtonLogin from '../buttons/ButtonLogin'
 
 export default function Nav() {
   return (
@@ -13,7 +14,9 @@ export default function Nav() {
         <ul className={style.navList}>
           <li>Information</li>
           <li>Rooms</li>
-          <li>Current interviews</li>
+          <li className={style.singUp}>
+            <ButtonLogin />
+          </li>
         </ul>
       </div>
     </div>
