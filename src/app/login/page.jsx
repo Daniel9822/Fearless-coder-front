@@ -13,6 +13,7 @@ export default function LoginParams() {
   const profile = searchParams.get('profile');
   const token = searchParams.get('token');
   const name = searchParams.get('name');
+  const email = searchParams.get('email')
 
   useEffect(() => {
     if (userId && profile && token && name) {
@@ -20,7 +21,8 @@ export default function LoginParams() {
         profile,
         token,
         id: userId,
-        name
+        name,
+        email
       };
 
       // Agrega el usuario al contexto
