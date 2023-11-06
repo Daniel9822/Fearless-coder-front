@@ -18,6 +18,8 @@ export function ContextProvider({ children }) {
   const [userActual, setUserActual] = useState({});
 
   const addUserInfo = (user) => {
+    console.log(user);
+
     setUserActual(user);
   }
 
