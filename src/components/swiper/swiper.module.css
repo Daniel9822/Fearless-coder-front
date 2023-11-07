@@ -8,5 +8,6 @@
   width: 100%;
   height: calc(100vh - 80px);
   object-fit: cover;
-  /* filter: blur(2px); */
+  filter: blur(2px);
+  opacity: 0.5;
 }
