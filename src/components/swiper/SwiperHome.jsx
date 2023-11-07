@@ -7,18 +7,24 @@ import style from './swiper.module.css'
 import 'swiper/css'
 import 'swiper/css/virtual'
 
+const images = [
+  '/video-conference3.avif',
+  '/video-conference1.avif',
+  '/video-conference2.avif'
+]
+
 export default function SwiperHome() {
-  const img = [
-    <img className={style.img} key={1} src="/video-conference3.avif" />,
-    <img className={style.img} key={2} src="/video-conference1.avif" />,
-    <img className={style.img} key={3} src="/video-conference2.avif" />
-  ]
   return (
     <div className={style.swiperContainer}>
-      <Swiper effect='card' autoplay={{ delay: 6000 }} modules={[Autoplay, EffectCards]} slidesPerView={1}>
-        {img.map((slideContent) => (
-          <SwiperSlide key={slideContent}>
-            {slideContent}
+      <Swiper
+        effect='card'
+        autoplay={{ delay: 6000 }}
+        modules={[Autoplay, EffectCards]}
+        slidesPerView={1}
+      >
+        {images.map((slideContent, index) => (
+          <SwiperSlide key={index}>
+            <img className={style.img} src={slideContent} alt='backgound images' />
           </SwiperSlide>
         ))}
       </Swiper>
