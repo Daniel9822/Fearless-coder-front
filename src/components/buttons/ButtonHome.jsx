@@ -7,7 +7,9 @@ export default function ButtonHome() {
   const handleNavigate = () => {
     router.push('/prueba')
   }
-  return <button onClick={handleNavigate} className={style.button}>
-    Empezar
-  </button>
+  return (
+    <button onClick={handleNavigate} className={style.button}>
+      <h3> Empezar</h3>
+    </button>
+  )
 }
