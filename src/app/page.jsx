@@ -30,12 +30,12 @@ export default function Home() {
 
       </main>
 
-      <ContentCreate backgroundImg={'/background2.png'} reverse={false} identificate={'moreInfo'} title={titleQuestion} img={'/interview.avif'} paragraph={[paragraphOne, paragraphOneContinue]}>
+      <ContentCreate backgroundImg={'/background2.png'} reverse={false} identificate={'moreInfo'} title={titleQuestion} img={'/interview.avif'} paragraph={[paragraphOne, paragraphOneContinue]} clipath={'polygon(0 0, 100% 0, 100% 100%, 0 82%);'}>
 
         <ButtonHome />
       </ContentCreate>
 
-      <ContentCreate clipath={'polygon(0 12%, 100% 0, 100% 100%, 0% 100%)'} backgroundImg={'/background.png'} color={'white'} background={'white'} reverse={true} title={titleTwo} img={'/video-conference1.avif'} paragraph={[paragraphTwo, paragraphTwoContinue]} >
+      <ContentCreate backgroundImg={'/background.png'} color={'white'} background={'white'} reverse={true} title={titleTwo} img={'/video-conference1.avif'} paragraph={[paragraphTwo, paragraphTwoContinue]}>
 
       </ContentCreate>
       <Footer />
