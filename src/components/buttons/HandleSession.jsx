@@ -36,7 +36,7 @@ export default function HandleSession() {
         <ButtonLogin/>
       ) : (
         <div className={style.imageContainer}>
-          <ImageProfile src={userActual.profile} />
+          <ImageProfile src={userActual?.profile} />
 
           <span>{<IoIosArrowDown size={20} />}</span>
         </div>
