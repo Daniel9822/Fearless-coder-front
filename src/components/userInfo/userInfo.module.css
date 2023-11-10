@@ -1,0 +1,133 @@
+.userInfo {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  position: relative;
+}
+
+.container {
+  height: 100%;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
+}
+
+.profileContainer img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.config {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.config .icon {
+  fill: white;
+  transition: fill 0.3s ease-in-out;
+}
+
+.icon:hover {
+  fill: var(--highlight-color);
+}
+
+.role {
+  font-size: 20px;
+}
+
+.role select {
+  padding: 5px;
+  background-color: var(--highlight-color);
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  background-image: url(/banner.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  inset: 0;
+  position: absolute;
+  /* opacity: 0.4; */
+  filter: brightness(40%);
+  /* animation: change infinite 10s alternate; */
+}
+
+.activityContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.594);
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icons div {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.createInterview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--highlight-color);
+  color: white;
+  border: none;
+  margin-left: auto;
+  padding: 10px;
+  border-radius: 20px;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.createInterview:hover {
+  opacity: 0.8;
+}
+
+@keyframes change {
+  0% {
+    filter: brightness(30%);
+  }
+
+  50% {
+    filter: brightness(50%);
+  }
+
+  100% {
+    filter: brightness(40%);
+  }
+}
