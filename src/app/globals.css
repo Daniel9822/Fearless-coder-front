@@ -14,12 +14,12 @@
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-  width: 10px; /* Ancho de la barra de desplazamiento */
+/* ::-webkit-scrollbar {
+  width: 10px; 
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #000; /* Color del fondo de la pista de desplazamiento */
+  background-color: #000; 
 }
 
 ::-webkit-scrollbar-thumb {
@@ -31,10 +31,9 @@
   scrollbar-color: #f1f1f1 #888;
 }
 
-/* Barra de desplazamiento en Firefox */
 *::-webkit-scrollbar-thumb {
   background-color: var(--highlight-color);
-}
+} */
 
 * {
   box-sizing: border-box;
