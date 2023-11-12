@@ -27,7 +27,7 @@ export default function UserInfo({ userActual }) {
           Elegir rol
           <select id='rol'>
             <option value='dev'>Desarrollador</option>
-            <option value='dev'>Reclutador</option>
+            <option value='recluter'>Reclutador</option>
           </select>
         </label>
 
