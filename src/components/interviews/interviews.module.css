@@ -1,0 +1,131 @@
+.wrapper {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row: 4 / -1;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.container {
+  padding: 10px;
+}
+
+.title {
+  font-size: 30px;
+  color: gray;
+  text-shadow: 1px 0px 0px white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.416);
+  padding-bottom: 5px;
+}
+
+.filters {
+  font-size: 20px;
+}
+
+.filters select {
+  margin-left: 10px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+}
+
+.interviewsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  max-height: 400px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.interviewsContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.interviewsContainer::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.interviewsContainer::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.interviewsContainer:hover::-webkit-scrollbar-thumb {
+  background-color: var(--highlight-color);
+}
+
+.interview {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+
+.buttons button {
+  /* background: var(--highlight-color); */
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  transition: background 0.3s ease-in-out;
+  font-weight: 700;
+  width: 50%;
+}
+
+.open {
+  background-color: var(--highlight-color);
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.open:hover {
+  opacity: 0.8;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.interviewTitle {
+  font-size: 18px;
+}
+
+.issue:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.issue {
+  cursor: pointer;
+}
+
+.disable {
+  opacity: 0.8;
+  background: rgba(99, 99, 99, 0.407);
+  cursor: default;
+}
+
+.circle {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
