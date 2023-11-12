@@ -2,32 +2,11 @@
   width: 1200px;
   margin: 0 auto;
   margin-top: 100px;
-  /* background-color: aqua; */
-  height: calc(100vh - 100px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 300px;
   gap: 10px;
-}
-
-/* .one {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-} */
-
-.four {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row: 4 / -1;
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 5px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4.7px);
-  -webkit-backdrop-filter: blur(4.7px);
-  border: 1px solid rgba(255, 255, 255, 0.11);
+  padding-bottom: 20px;
 }
 
 .tree {
