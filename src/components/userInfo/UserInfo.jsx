@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import style from './userInfo.module.css'
 import { AiOutlineSetting } from 'react-icons/ai'
-import { RiComputerLine } from 'react-icons/ri'
-import { VscFeedback } from 'react-icons/vsc'
-import { TbDeviceComputerCamera } from 'react-icons/tb'
+import { activities } from '@/utils/activities'
 
 export default function UserInfo({ userActual }) {
   return (
@@ -36,24 +34,19 @@ export default function UserInfo({ userActual }) {
         <aside className={style.activityContainer}>
           <h4 className={style.title}>Mi actividad</h4>
           <div className={style.icons}>
-            <div>
-              <span>
-                <VscFeedback className={style.icon} size={40} />
-              </span>
-              <span>FeedBack</span>
-            </div>
-            <div>
-              <span>
-                <RiComputerLine className={style.icon} size={40} />
-              </span>
-              <span>Entrevistas</span>
-            </div>
-            <button className={style.createInterview}>
-              <span>
-                <TbDeviceComputerCamera className={style.icon} size={40} />
-              </span>
-              <span>Crear entrevista</span>
-            </button>
+            {activities.map((ele) => {
+              return (
+                <button
+                  key={ele.id}
+                  className={
+                    ele.id === 3 ? style.createInterview : style.buttonIcon
+                  }
+                >
+                  <span>{ele.icon}</span>
+                  <span>{ele.name}</span>
+                </button>
+              )
+            })}
           </div>
         </aside>
       </div>
