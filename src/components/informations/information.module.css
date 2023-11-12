@@ -1,0 +1,44 @@
+.wrapper {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 30px;
+  background: linear-gradient(135deg, #f73d2c, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 1px solid rgba(70, 70, 70, 0.422);
+}
+
+.info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.info h4 {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(204, 204, 204, 0.488);
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.779);
+  text-shadow: 1px 0px 6px black;
+}
+
+.info h4 > span {
+  color: #f73d2c;
+  font-size: 20px;
+}
