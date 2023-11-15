@@ -5,6 +5,7 @@ import style from './rooms.module.css'
 import UserInfo from '@/components/userInfo/UserInfo'
 import Information from '@/components/informations/Information'
 import Interviews from '@/components/interviews/Interviews'
+import Questions from '@/components/questions/Questions'
 
 export default function page() {
   const { userActual } = useUserContext()
@@ -13,7 +14,7 @@ export default function page() {
     <section className={style.wrapper}>
       <UserInfo userActual={userActual} />
       <Information/>
-      <div className={style.tree}></div>
+      <Questions />
       <Interviews/>
     </section>
   )
