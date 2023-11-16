@@ -1,5 +1,7 @@
+import { createPortal } from 'react-dom'
+
 export default function ParentModal({ children, close }) {
-  return (
+  return createPortal(
     <div
       onClick={close}
       style={{
@@ -13,6 +15,7 @@ export default function ParentModal({ children, close }) {
       }}
     >
       {children}
-    </div>
+    </div>,
+    window.document.body
   )
 }
