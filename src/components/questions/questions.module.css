@@ -46,8 +46,17 @@
 
 .list li {
   padding: 10px;
-  background: gray;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.9px);
+  -webkit-backdrop-filter: blur(4.9px);
   margin-bottom: 10px;
   font-size: 20px;
-  /* border-radius: 5px; */
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.list li:hover {
+  opacity: 0.8;
 }
