@@ -50,7 +50,6 @@ export default function Home() {
         title={titleQuestion}
         img={'/interview.avif'}
         paragraph={[paragraphOne, paragraphOneContinue]}
-        clipath={'polygon(0 0, 100% 0, 100% 100%, 0 82%)'}
       >
         <ButtonHome />
       </ContentCreate>
