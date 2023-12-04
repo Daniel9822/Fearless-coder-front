@@ -9,7 +9,7 @@ export default function ButtonHome() {
   }
   return (
     <button onClick={handleNavigate} className={style.button}>
-      <h3> Empezar</h3>
+      <h3>Empezar</h3>
     </button>
   )
 }
