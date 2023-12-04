@@ -3,8 +3,16 @@ import Filters from './filters'
 import style from './interviews.module.css'
 import { interviewsMock } from './mock'
 import { GoIssueTrackedBy } from 'react-icons/go'
+import { axiosConfig } from '@/utils/axios-config'
 
-export default function Interviews() {
+const getInterviews = async () => {
+  const { data } = await axiosConfig.get(`${process.env.SERVER_URL}/interview`)
+  return data
+}
+
+export default async function Interviews() {
+  const data = await getInterviews()
+  console.log(data);
   return (
     <article className={style.wrapper}>
       <div className={style.container}>
