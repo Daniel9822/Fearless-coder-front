@@ -20,7 +20,7 @@ const getUserActual = async ({ email }) => {
 
 export default function HandleSession() {
   const { userActual, addUserInfo } = useUserContext()
-  const userLocal = JSON.parse(localStorage.getItem('user'))
+  const userLocal = JSON.parse(window.localStorage.getItem('user'))
 
   useEffect(() => {
     if (userLocal?.email) {
