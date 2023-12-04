@@ -1,5 +1,4 @@
 'use client'
-
 import style from './button.module.css'
 import { useUserContext } from '@/context/userContex'
 import { IoIosArrowDown } from 'react-icons/io'
@@ -36,7 +35,7 @@ export default function HandleSession() {
         <ButtonLogin/>
       ) : (
         <div className={style.imageContainer}>
-          <ImageProfile src={userActual?.profile} />
+          <ImageProfile image={userActual?.profile} />
 
           <span>{<IoIosArrowDown size={20} />}</span>
         </div>
