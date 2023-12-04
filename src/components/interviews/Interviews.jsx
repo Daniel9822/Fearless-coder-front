@@ -1,7 +1,7 @@
 import { BsDoorOpen } from 'react-icons/bs'
 import Filters from './filters'
 import style from './interviews.module.css'
-import { interviewsMock } from './mock'
+// import { interviewsMock } from './mock'
 import { GoIssueTrackedBy } from 'react-icons/go'
 import { axiosConfig } from '@/utils/axios-config'
 
@@ -22,9 +22,9 @@ export default async function Interviews() {
         </div>
 
         <aside className={style.interviewsContainer}>
-          {interviewsMock.map((interview) => {
+          {data.map((interview) => {
             return (
-              <div key={interview.id} className={style.interview}>
+              <div key={interview._id} className={style.interview}>
                 <h4 className={style.interviewTitle}>{interview.title}</h4>
                 <div className={style.buttons}>
                   <button className={style.issue}>
@@ -37,7 +37,7 @@ export default async function Interviews() {
                     }
                   >
                     <BsDoorOpen size={20} />
-                    <span>Etrar</span>
+                    <span>Entrar</span>
                   </button>
                 </div>
 
