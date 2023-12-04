@@ -1,23 +1,15 @@
-import Image from 'next/image'
 import style from './userInfo.module.css'
 import { AiOutlineSetting } from 'react-icons/ai'
 import { activities } from '@/utils/activities'
+import Profile from './profile'
 
-export default function UserInfo({ userActual }) {
+export default function UserInfo() {
   return (
     <article className={style.userInfo}>
       <div className={style.banner} />
       <div className={style.container}>
         <div className={style.profileContainer}>
-          <Image
-            className={style.profile}
-            width={80}
-            height={80}
-            src={userActual?.profile || '/interview.avif'}
-            alt='profile'
-          />
-
-          <span>{userActual.name || 'Usuario desconocido'}</span>
+          <Profile/>
           <span className={style.config}>
             <AiOutlineSetting className={style.icon} size={35} />
           </span>
