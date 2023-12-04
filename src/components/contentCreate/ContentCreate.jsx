@@ -10,7 +10,6 @@ export default function ContentCreate({
   clipath,
   backgroundImg,
   color,
-  background,
   reverse,
   identificate,
   title,
